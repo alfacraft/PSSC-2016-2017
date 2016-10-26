@@ -6,12 +6,36 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-   public class Profesor:Decanat
+   public class Profesor
     {
-       public void setpoportie(float prop)
+
+       string nume_profesor;
+       long cnp_profesor;
+       string catedra_profesor;
+
+       public Profesor(string numeProfesor, long cnpProfesor, string catedraProfesor)
        {
-           proportie = prop;
+           this.nume_profesor = numeProfesor;
+           this.cnp_profesor = cnpProfesor;
+           this.catedra_profesor = catedraProfesor;
        }
-       protected float proportie;
+
+       public string NumeProfesor
+       {
+           get { return nume_profesor; }
+           set { nume_profesor = value; }
+       }
+
+       public long CnpProfesor
+       {
+           get { return cnp_profesor;}
+           set { cnp_profesor = value; }
+       }
+
+       public string CatedraProfesor
+       {
+           get { return catedra_profesor; }
+           set { catedra_profesor = value; }
+       }
     }
 }

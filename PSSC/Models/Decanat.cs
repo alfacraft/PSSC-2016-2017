@@ -6,22 +6,36 @@ using System.Threading.Tasks;
 
 namespace Models
 {}
-    class Decanat
+    public class Decanat
     {
-        public void materie(string[] mat)
-        {
-            discip = mat;
-        }
-        public void teacher(string[] pr)
-        {
-            prof = pr;
-        }
-        protected string[] discip;
-        protected string[] prof;
+        List<Models.Disciplina> disciplina = new List<Models.Disciplina>();
+        List<Models.Student> student = new List<Models.Student>();
+        List<Models.Profesor> profesor = new List<Models.Profesor>();
 
-        public void totalCredite()
+        public Decanat (List<Models.Disciplina> disciplina, List<Models.Profesor> profesor, List<Models.Student> student)
         {
-           
+            this.disciplina = disciplina;
+            this.student = student;
+            this.profesor = profesor;
+        }
+
+        private List<Models.Disciplina> Disciplina
+        {
+            get{return disciplina;}
+            set{disciplina = value;}
+        }
+
+        private List<Models.Student> Student
+        {
+            get{return student;}
+            set{student = value;}
+        }
+
+        private List<Models.Profesor> Profesor
+        {
+            get{return profesor;}
+            set{profesor = value;}
         }
     }
 }
+

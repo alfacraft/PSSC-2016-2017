@@ -6,20 +6,46 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Disciplina:Profesor
+    enum EvaluareExamen
     {
+        distribuit, examen
+    }
+    public class Disciplina
+    {
+        string denumire_materie;
+        int credite_materie;
+        int an_studiu;
+        EvaluareExamen evaluare_examen;
 
-        protected int valoare_credite;
-        protected int evaluare_materie;  // 0 - Distribuit / 1 - Examen final
-
-       public void setCredite(int c)
+        public Disciplina(string denumireMaterie, int crediteMaterie, int anStudiu)
         {
-            valoare_credite = c;
+            this.denumire_materie = denumireMaterie;
+            this.credite_materie = crediteMaterie;
+            this.an_studiu = anStudiu;
         }
 
-        public void setEvaluare(int e)
-       {
-           evaluare_materie = e;
-       }
+        public string DenumireMaterie
+        {
+            get { return denumire_materie; }
+            set { denumire_materie = value; }
+        }
+
+        public int CrediteMaterie
+        {
+            get { return credite_materie; }
+            set { credite_materie = value; }
+        }
+
+        public int AnStudiu
+        {
+            get { return an_studiu; }
+            set { an_studiu = value; }
+        }
+
+        public EvaluareExamen Examen
+        {
+            get { return evaluare_examen; }
+            set { evaluare_examen = value; }
+        }
     }
 }
