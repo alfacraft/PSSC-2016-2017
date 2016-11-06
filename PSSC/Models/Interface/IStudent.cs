@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Generics.Exceptions
+namespace Models.Interface
 {
-    public class InvalidCreditsValue : Exception
+    interface IStudent
     {
-           
+        int yearOfStudy
+        {
+            get;
+            set;
+        }
     }
 }

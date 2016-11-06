@@ -16,7 +16,8 @@ namespace Models.Deanship
     //Strategy Context
     public interface IReportPublisher
     {
-        void Publish(IReportStrategy strategy);
+        void Publish(IReportStrategy strategy);  
+
     }
 
 }
