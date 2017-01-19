@@ -50,8 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messaging\CommandBus.cs" />
+    <Compile Include="Commands\ChangeItemCommand.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="CommandHandlers\ChangeItemCommandHandler.cs" />
+    <Compile Include="CommandHandlers\CreateItemCommandHandler.cs" />
+    <Compile Include="Commands\CreateItemCommand.cs" />
     <Compile Include="Deanship\IReportPublisher.cs" />
     <Compile Include="Deanship\StudyYear.cs" />
+    <Compile Include="CommandHandlers\DeleteItemCommandHandler.cs" />
+    <Compile Include="Commands\DeleteItemCommand.cs" />
+    <Compile Include="Messaging\EventBus.cs" />
+    <Compile Include="Events\Event.cs" />
     <Compile Include="Generics\Attendence.cs" />
     <Compile Include="Generics\Credits.cs" />
     <Compile Include="Generics\Exceptions\InvalidCreditsValue.cs" />
@@ -60,9 +70,23 @@
     <Compile Include="Generics\PlainText.cs" />
     <Compile Include="Generics\Proportion.cs" />
     <Compile Include="Generics\RegistrationNumber.cs" />
+    <Compile Include="CommandHandlers\ICommandHandler.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="EventHandler\IEventHandler.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\IHandle.cs" />
+    <Compile Include="Messaging\ICommandBus.cs" />
+    <Compile Include="Messaging\ICommandHandlerFactory.cs" />
+    <Compile Include="Messaging\IEventBus.cs" />
+    <Compile Include="Messaging\IEventHandlerFactory.cs" />
     <Compile Include="Interface\IProfessor.cs" />
     <Compile Include="Interface\IStudent.cs" />
     <Compile Include="Interface\ISubject.cs" />
+    <Compile Include="EventHandler\IReportDatabase.cs" />
+    <Compile Include="EventHandler\ItemCreatedEventHandler.cs" />
+    <Compile Include="EventHandler\ItemDeletedEventHandler.cs" />
+    <Compile Include="Events\ItemCreatedEvent.cs" />
+    <Compile Include="Events\ItemDeletedEvent.cs" />
     <Compile Include="Professor\Professor.cs" />
     <Compile Include="Professor\Subjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
